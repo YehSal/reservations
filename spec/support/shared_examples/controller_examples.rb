@@ -8,6 +8,6 @@ shared_examples_for 'successful request' do |template|
 end
 
 shared_examples_for 'redirected request' do
-  it { expect(response).to be_redirect }
+  it { is_expected.to redirect_to(root_url) }
   it { is_expected.to set_flash }
 end
